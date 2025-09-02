@@ -1,0 +1,29 @@
+/* BillingForm.css */
+
+.billing-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .billing-details {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .billing-details p {
+    margin: 5px 0;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  

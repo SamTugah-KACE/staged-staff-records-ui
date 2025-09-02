@@ -1,0 +1,57 @@
+diff --git a/node_modules/react-joyride/dist/index.mjs b/node_modules/react-joyride/dist/index.mjs
+index b5925d5..7972e39 100644
+--- a/node_modules/react-joyride/dist/index.mjs
++++ b/node_modules/react-joyride/dist/index.mjs
+@@ -1223,21 +1223,49 @@ var JoyridePortal = class extends React3.Component {
+       return;
+     }
+     if (!isReact16) {
+-      ReactDOM.unmountComponentAtNode(this.node);
++      // ReactDOM.unmountComponentAtNode(this.node);
++  // eslint-disable-next-line no-console
++  // console.warn(
++  //   "react-joyride: unmountComponentAtNode is deprecated. " +
++  //   "Please use ReactDOM.render instead."
++  // );
++
++      // In React 18, unmountComponentAtNode is no longer available.
++  // We provide a fallback that simply removes the node from its parent.
++  // This is a workaround for the fact that ReactDOM.unmountComponentAtNode
++  // does not remove the node from its parent in React 18.
++  // eslint-disable-next-line no-console
++  // console.warn(
++  //   "react-joyride: unmountComponentAtNode is deprecated. " +
++  //   "Please use ReactDOM.render instead."
++  // );
++  if (this.node && this.node.parentNode) {
++    this.node.parentNode.removeChild(this.node);
++  }
+     }
+     if (this.node.parentNode === document.body) {
+       document.body.removeChild(this.node);
+       this.node = null;
+     }
+   }
++  // renderReact15() {
++  //   if (!canUseDOM()) {
++  //     return;
++  //   }
++  //   const { children } = this.props;
++  //   if (this.node) {
++  //     ReactDOM.unstable_renderSubtreeIntoContainer(this, children, this.node);
++  //   }
++  // }
+   renderReact15() {
+     if (!canUseDOM()) {
+-      return;
++      return null;
+     }
+     const { children } = this.props;
+     if (this.node) {
+-      ReactDOM.unstable_renderSubtreeIntoContainer(this, children, this.node);
++      return ReactDOM.createPortal(children, this.node);
+     }
++    return null;
+   }
+   renderReact16() {
+     if (!canUseDOM() || !isReact16) {

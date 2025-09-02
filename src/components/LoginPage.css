@@ -1,0 +1,358 @@
+/* src/components/LoginPage.css */
+
+/* .login-page {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-container label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-mode-toggle {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.95rem;
+  gap: 0.5rem;
+}
+
+.login-mode-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #ffffff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Mobile adjustments */
+/* @media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-btn {
+    font-size: 0.95rem;
+  }
+} */
+
+/* src/components/LoginPage.css */
+:root {
+  --primary-color: #007bff;
+}
+
+.login-page {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container label {
+  text-align: left;
+  font-weight: bold;
+  color: black;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-mode-toggle {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+/* Adjusted styles for FacialAuth component */
+.facial-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.webcam-video {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 2px solid var(--primary-color);
+}
+
+.capture-btn {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.captured-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+}
+
+/* Login Button with fixed size/layout to support spinner */
+.login-btn {
+  position: relative;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px; /* enforce minimum width to avoid resizing */
+}
+
+/* Simple spinner styled to not break layout */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #fff; /* contrast with button background */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 15px;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    padding: 8px;
+  }
+  
+  .login-btn {
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
+
+
+/* src/components/LoginPage.css */
+/* .login-page { */
+    /* background-image: url('../assets/images/stock-photo.jpg');                          //Use a logo as background */
+    /* background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-container label {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-mode-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+  
+  .facial-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .webcam-video {
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .capture-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .captured-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .login-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  } */
+
+  /* Simple spinner for loading state */
+/* .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } */
+   

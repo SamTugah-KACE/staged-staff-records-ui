@@ -1,0 +1,232 @@
+.secondary-header {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: #6C87FF;
+  display: flex;
+  justify-content: right; 
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-sizing: border-box;
+  height: 55px;
+}
+
+/* Notification styles */
+.secondary-header__notification {
+  position: relative;
+  margin-right: 20px;
+}
+
+.secondary-header__notification-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary, white);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.secondary-header__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accent-red, #ff4757);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(25%, -25%);
+}
+
+/* Notification dropdown */
+.notification-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  width: 350px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 300;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.notification-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.mark-all-read {
+  background: none;
+  border: none;
+  color: #6C87FF;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.notification-list {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.notification-item:hover {
+  background: #f8f8f8;
+}
+
+.notification-item.unread {
+  background: #f0f5ff;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content p {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.unread-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6C87FF;
+  margin-left: 8px;
+}
+
+.notification-footer {
+  padding: 12px 16px;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+}
+
+.notification-footer a {
+  color: #6C87FF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Existing secondary header styles */
+.secondary-header__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.secondary-header__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color, white);
+}
+
+.secondary-header__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-header__name {
+  font-weight: 600;
+  color: var(--text-primary, white);
+}
+
+.secondary-header__title-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.secondary-header__title {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #f1f1f1);
+}
+
+.secondary-header__arrow {
+  transition: transform 0.2s ease;
+  font-size: 0.75rem;
+}
+
+.secondary-header__arrow.open {
+  transform: rotate(180deg);
+}
+
+.secondary-header__dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--dropdown-bg, white);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  z-index: 300;
+  min-width: 150px;
+}
+
+.secondary-header__dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.secondary-header__dropdown a:hover {
+  background: var(--dropdown-hover, #f5f5f5);
+}
+
+
+.secondary-header__download-btn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.25rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.secondary-header__download-btn:hover {
+  background: white;
+  color: #6C87FF;
+}

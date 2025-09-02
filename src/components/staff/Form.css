@@ -1,0 +1,164 @@
+/* src/components/Form.css */
+.qualification-form {
+    max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qualification-form h2 {
+    margin-bottom: 24px;
+    text-align: center;
+    color: #1890ff;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="url"],
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-actions {
+    display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  }
+  
+  .form-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-actions button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .form-actions button[type="submit"] {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .form-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .add-new-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .honor-tags, .publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .honor-input, .link-input {
+    width: 200px;
+    margin-right: 8px;
+  }
+  
+  .add-honor-tag, .add-link-tag {
+    background: #fff;
+    border-style: dashed;
+    cursor: pointer;
+  }
+  
+  .qualification-details h3 {
+    color: #1890ff
+  }
+
+  .save-button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+  
+  .save-button[disabled] {
+    opacity: 0.6;
+  }
+
+  /* Add to your Form.css file */
+.honor-tags .ant-tag-close-icon {
+    color: #ff4d4f;
+  }
+  
+  .honor-tags .ant-tag-close-icon:hover {
+    color: #ff7875;
+  }
+  
+  .add-honor-tag, .add-link-tag {
+    cursor: pointer;
+    color: #1890ff;
+  }
+  
+  .add-honor-tag:hover, .add-link-tag:hover {
+    color: #40a9ff;
+  }
+  
+  /* Style for file upload buttons */
+  .ant-upload-list-item-card-actions-btn {
+    color: #1890ff;
+  }
+  
+  .ant-upload-list-item-card-actions-btn:hover {
+    color: #40a9ff;
+  }
+  
+  /* Style for View/Download icons */
+  .view-file-button, .download-file-button {
+    color: #1890ff;
+  }
+  
+  .view-file-button:hover, .download-file-button:hover {
+    color: #40a9ff;
+  }
+  
+  .publication-links .ant-tag-close-icon {
+    color: #ff4d4f;
+  }
+  
+  .publication-links .ant-tag-close-icon:hover {
+    color: #ff7875;
+  }

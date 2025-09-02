@@ -1,0 +1,56 @@
+/* src/components/EditableDepartmentRow.css */
+.editable-dept-row td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.update-btn {
+  padding: 4px 8px;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.update-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.row-error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+
+
+/* src/components/EditableDepartmentRow.css
+.editable-dept-row td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+  }
+  
+  .update-btn {
+    padding: 4px 8px;
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .update-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .row-error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
+   */

@@ -1,0 +1,49 @@
+/* ProductDataForm.css */
+
+.product-data-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .subscription-cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .subscription-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .subscription-card.selected {
+    border-color: #007bff;
+  }
+  
+  .subscription-card h3 {
+    margin-top: 0;
+  }
+  
+  .billing-cycle-select {
+    margin-top: 10px;
+  }
+  
+  .billing-cycle-select label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .billing-cycle-select select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

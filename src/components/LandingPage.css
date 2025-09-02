@@ -1,0 +1,76 @@
+/* LandingPage.css */
+
+/* .landing-page {
+    text-align: center;
+    padding: 20px;
+  } */
+
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* header h1 {
+    margin: 0;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+  } */
+  
+  /* Header takes minimal vertical space */
+header {
+  flex: 0 0 auto;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+}
+  
+  /* .carousel-container {
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+    overflow: hidden;
+  } */
+
+  /* Main area (carousel) expands to fill remaining space */
+.carousel-container {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+  
+  /* .carousel-slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  } */
+
+  /* Hide all slides by default */
+.carousel-slide {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+  /* .carousel-slide.active {
+    opacity: 1;
+    position: relative;
+  }
+   */
+
+   /* Only display the active slide */
+.carousel-slide.active {
+  display: flex;
+}

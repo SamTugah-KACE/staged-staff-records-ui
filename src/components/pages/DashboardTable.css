@@ -1,0 +1,152 @@
+.dashboard-table {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.table-header {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.attachment-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.file-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.table-btn {
+  padding: 6px 12px;
+  margin: 0 2px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+
+  tbody td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    width: 45%;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+
+.pagination button {
+  padding: 6px 12px;
+  margin: 0 2px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pagination-controls label {
+  font-weight: bold;
+}
+
+.pagination-controls select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .pagination-controls {
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

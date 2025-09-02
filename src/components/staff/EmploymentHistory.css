@@ -1,0 +1,147 @@
+/* EmploymentHistory.css */
+.custom-table-container {
+    margin-top: 20px;
+  }
+  
+  .custom-table .ant-table-thead > tr > th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .custom-table .ant-table-tbody > tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  .custom-table .ant-table-tbody > tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  
+  .actions, .file-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .view-button, .view-file-button, .download-file-button, .document-link {
+    color: #1890ff;
+  }
+  
+  .view-button:hover, .view-file-button:hover, .download-file-button:hover, .document-link:hover {
+    color: #40a9ff;
+  }
+  
+  .employment-history-edit-button {
+    color: #52c41a;
+  }
+  
+  .employment-history-edit-button:hover {
+    color: #73d13d;
+  }
+  
+  .delete-button {
+    color: #ff4d4f;
+  }
+  
+  .delete-button:hover {
+    color: #ff7875;
+  }
+  
+  .custom-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-form .ant-form-item-label > label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .save-button {
+    background-color: #1890ff;
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: #40a9ff;
+  }
+  
+  .cancel-button {
+    background-color: #e6e6e6;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d9d9d9;
+  }
+  
+  .form-actions {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .document-section {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .ant-dropdown-menu-item .anticon {
+    margin-right: 8px;
+  }
+  
+  .ant-descriptions-item-content {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  
+  /* Document List Modal Styles */
+  .document-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .document-list-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .document-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .document-info {
+    flex-grow: 1;
+  }
+  
+  .document-name {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  
+  .document-date {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .document-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* Upload List Customization */
+  .ant-upload-list-item {
+    transition: all 0.3s;
+  }
+  
+  .ant-upload-list-item:hover {
+    background-color: #f0f7ff;
+  }
+  
+  .ant-upload-list-item-name {
+    font-weight: 500;
+  }

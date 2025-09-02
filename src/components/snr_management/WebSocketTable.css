@@ -1,0 +1,68 @@
+/* src/components/WebSocketTable.css */
+.websocket-table {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.websocket-table h3 {
+  padding: 1rem;
+  background: var(--primary-color);
+  color: white;
+  margin: 0;
+}
+
+.table-scroller {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.websocket-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.websocket-table th,
+.websocket-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.websocket-table th {
+  background: var(--primary-color);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.websocket-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.ws-error {
+  color: #e74c3c;
+  padding: 1rem;
+  background: #f8d7da;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .websocket-table {
+    margin: 1rem -15px;
+    border-radius: 0;
+  }
+  
+  .websocket-table h3 {
+    padding: 0.75rem;
+  }
+  
+  .websocket-table th,
+  .websocket-table td {
+    padding: 8px 10px;
+  }
+}

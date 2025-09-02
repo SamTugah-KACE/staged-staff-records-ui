@@ -1,0 +1,19 @@
+/* src/components/FacialAuth.css */
+.facial-auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .facial-canvas {
+    border: 2px solid var(--primary-color);
+  }
+  .capture-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

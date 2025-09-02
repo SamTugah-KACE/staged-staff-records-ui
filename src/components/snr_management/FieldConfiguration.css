@@ -1,0 +1,52 @@
+/* src/components/snr_management/FieldConfiguration.css */
+.field-config {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .config-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .config-row.inline {
+    display: flex;
+    align-items: center;
+  }
+  
+  .config-label {
+    font-weight: bold;
+    margin-right: 8px;
+    min-width: 60px;
+  }
+  
+  .config-static-label {
+    margin-right: 8px;
+  }
+  
+  .config-input {
+    flex: 1;
+    padding: 4px 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 1rem;
+    padding: 2px 4px;
+  }
+  
+  .config-required-label {
+    margin-left: 4px;
+    font-size: 0.95rem;
+  }
+  

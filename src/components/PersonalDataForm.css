@@ -1,0 +1,59 @@
+/* PersonalDataForm.css */
+
+.personal-data-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bio-data-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .preview-image {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* New CSS for spinner overlay */
+.form-container {
+  position: relative;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

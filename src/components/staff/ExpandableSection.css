@@ -1,0 +1,35 @@
+/* src/components/ExpandableSection.css */
+.expandable-section {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .section-title i {
+    margin-right: 10px;
+  }
+  
+  .section-toggle {
+    font-size: 16px;
+  }
+  
+  .section-content {
+    padding: 15px;
+  }
+  

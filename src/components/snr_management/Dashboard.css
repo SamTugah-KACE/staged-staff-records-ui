@@ -1,0 +1,204 @@
+:root {
+   --sidebar-width-expanded: 250px;
+  --sidebar-width-collapsed: 60px;
+  --header-height: 60px;
+  --footer-height: 40px;
+  /* --primary-color: #2c3e50; */
+  --background: #f5f6fa;
+  --sidebar-bg: #2c3e50;
+  --text-color: #fff;
+}
+    
+    
+    .dashboard-frame {
+      /* display: grid;  */
+      /* grid-template-columns: auto 1fr auto; */
+      /* grid-template-rows: auto 1fr auto; */
+      /* grid-template-areas:  */
+        /* "header header" */
+        /* "sidebar main-content" */
+        /* /* "footer footer"; */
+        display: flex;
+      flex-direction: column;
+      
+      height: 100vh;
+    }
+    
+    /* .dashboard-header { grid-row: 1; }
+    .dashboard-footer { grid-row: 3; }
+
+    .dashboard-header, .dashboard-footer { flex: 0 0 auto; } */
+   .dashboard-header { grid-area: header; }
+.sidebar          { grid-area: sidebar; overflow: hidden; transition: width 0.3s ease; }
+.main-content     { grid-area: main; display: flex; flex-direction: column; overflow-y: auto; padding: 1rem; }
+.dashboard-footer { grid-area: footer; }
+
+.sidebar.expanded { width: 220px; }
+.sidebar.collapsed { width: 60px; }
+    
+    .dashboard-body {
+      display: flex;
+      grid-row: 2;
+      flex: 1 1 auto;
+      background: var(--background);
+      overflow: hidden;
+      position: relative;
+    }
+
+  
+    
+    .dashboard-body > aside {
+      flex: 0 0 var(--sidebar-width, 250px);
+    }
+
+    /* Ensure sidebar sits above content when expanded/collapsed */
+.sidebar {
+  z-index: 20;
+}
+    
+
+
+    .main-content {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      background: var(--background);
+      padding: 1rem;
+      position: relative;
+      transition: margin-left 0.3s ease;
+      color: black;
+    }
+    
+    .dashboard-profile,
+    .dashboard-search {
+      position: sticky;
+      top: 0;
+      background: var(--background);
+      z-index: 100;
+    }
+    
+    .cards-wrapper {
+      flex: 0 0 auto;
+      margin-bottom: 1rem;
+      overflow-x: auto;
+    }
+    
+    .carousel-section {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      margin-top: 1rem;
+    }
+    
+    .carousel-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+   /* Dynamically offset main content based on sidebar width */
+.dashboard-body .sidebar.expanded ~ .main-content {
+  margin-left: 220px;
+}
+.dashboard-body .sidebar.collapsed ~ .main-content {
+  margin-left: 60px;
+}
+.sidebar { flex: 0 0 auto; transition: width 0.3s ease; height: 100%; }
+.sidebar.expanded { width: 220px; }
+.sidebar.collapsed { width: 60px; }
+.main-content { flex: 1 1 auto; display: flex; flex-direction: column; overflow-y: auto; transition: margin-left 0.3s ease; }
+.cards-wrapper, .panel-slider { padding: 1rem; }
+.dashboard-search, .dashboard-profile { position: sticky; top: 0; background: var(--background); z-index: 10; }
+
+@media (max-width: 768px) {
+  .dashboard-body { flex-direction: column; }
+  .sidebar { width: 100% !important; height: auto; }
+  .main-content { margin-top: 0; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard-frame {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main-content"
+      "footer";
+  }
+  .sidebar {
+    grid-area: header;  /* show sidebar as header on mobile */
+    width: 100% !important;
+    height: auto;
+  }
+  .main-content { margin: 0; }
+}
+
+    /* .panel-slider {
+      flex: 1 1 auto;
+      overflow-y: auto;
+    }
+    .panel-slider .slick-slide > div {
+      outline: none; /* remove focus outline on slide */
+    /* }  */
+
+
+
+
+/* src/components/Dashboard.css */
+/* src/components/Dashboard.css
+.dashboard-frame {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+.dashboard-header { grid-row: 1; }
+.dashboard-footer { grid-row: 3; }
+
+.dashboard-body {
+  display: flex;
+  grid-row: 2;
+  overflow: hidden;
+}
+
+/* sidebar flex‑basis driven by CSS var set inline from Dashboard */
+/* .dashboard-body > aside {
+  flex: 0 0 var(--sidebar-width);
+} */
+
+/* main content takes the rest */
+/* .main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--background);
+  overflow: hidden;
+} */
+
+/* fixed parts */
+/* .dashboard-profile,
+.dashboard-search,
+.cards-wrapper {
+  flex: 0 0 auto;
+  margin-bottom: 1rem;
+} */
+
+/* cards scroll horizontally if necessary */
+/* .cards-wrapper {
+  overflow-x: auto;
+} */
+
+/* table fills remaining vertical space */
+/* .table-wrapper {
+  flex: 1 1 auto;
+  overflow-y: auto;
+} */
+
+/* full‑height reset */
+/* html, body, #root {
+  height: 100%;
+  margin: 0;
+} */ 
+
+
+

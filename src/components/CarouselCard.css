@@ -1,0 +1,74 @@
+/* CarouselCard.css */
+
+/* .carousel-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .carousel-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* .card-content {
+    margin: 15px 0;
+  } */
+
+  .card-content {
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  /* .get-started-btn {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  } */
+
+
+  .get-started-btn {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  /* .get-started-btn:hover {
+    background-color: #218838;
+  } */
+
+  .get-started-btn:hover {
+    background-color: #218838;
+  }
+  

@@ -1,0 +1,180 @@
+.App-header {
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  height: 55px;
+  z-index: 1000;
+  top: 0; 
+}
+
+.dark-mode .App-header {
+  background-color: #222; 
+  color: var(--text-color); 
+}
+
+.App-logo {
+  height: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-text {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: -50px;
+  color: white; 
+}
+
+.header2 {
+  font-size: 2em;
+  font-weight: bold;
+  background-color: #444;
+  color: white;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  top: 55px; 
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.theme-toggle-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; 
+  position: fixed;
+  top: 10px; 
+  right: 9px; 
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  color: black;
+}
+
+.theme-icon {
+  font-size: 24px; 
+}
+
+.notification-button {
+  background-color: transparent;
+  display: inline-block;
+  border: none;
+  top: 40px;
+  right: -20px;
+  z-index: 2;
+  position: fixed;
+  cursor: pointer;
+  color: white; 
+}
+
+.notification-button:hover {
+  color: #007bff; 
+}
+
+.notification-button p {
+  font-size: 12px;
+  color: white;
+  background-color: red;
+  border-radius: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 50px;
+  right: 20px;
+  position: fixed;
+}
+
+.notification-button:active {
+  background-color: transparent;
+}
+
+.notification-button:focus,
+.theme-toggle-button:focus {
+  outline: none; 
+}
+
+.profile-username {
+  position: fixed;
+  color: white;
+  font-size: 20px;
+  top: 53px;
+  right: 80px;
+}
+
+.profile-role {
+  position: fixed;
+  color: white;
+  font-size: 15px;
+  top: 80px;
+  right: 170px;
+  font-weight: 100;
+}
+
+.middle-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #4d3333;
+  margin-top: -1px;
+  top: 57px;
+  right: 220px;
+  z-index: 2;
+  position: fixed;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 5px 10px; 
+  }
+
+  .header-text {
+    font-size: 1.2em; 
+  }
+
+  .theme-toggle-button {
+    padding: 5px; 
+    right: 10px;
+  }
+
+  .theme-icon,
+  .notification-icon {
+    font-size: 20px; 
+  }
+
+  .notification-button {
+    top: 35px; 
+    right: -15px; 
+  }
+
+  .middle-image{
+    right: 170px;
+  }
+
+  .profile-username {
+    font-size: 14px; 
+    right: 70px; 
+    top: 58px; 
+  }
+
+  .profile-role {
+    font-size: 12px; 
+    right: 130px; 
+  }
+}

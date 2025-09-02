@@ -1,0 +1,116 @@
+:root {
+  /* --sidebar-width-expanded: 250px;
+  --sidebar-width-collapsed: 60px;
+  --header-height: 60px;
+  --footer-height: 40px;
+  --primary-color: #2c3e50;
+  --background: #f5f6fa; */
+  --sidebar-bg: #2c3e50;
+  --primary-color: #2c3e50;
+  --text-color: #fff;
+}
+
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--text-color);
+  box-sizing: border-box;
+  padding: 10px;
+  padding: 0.5rem;
+  transition: width 0.3s ease;
+  /* height: 100%; */
+  /* Adjusted for header height */
+    /* height: calc(100vh - 60px);  */
+    height: 100vh;
+    z-index: 900;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar.expanded {
+  width: auto; /* Will expand to fit longest menu text */
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.menu-list {
+  list-style: none;
+  padding-left: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+}
+
+.dropdown-indicator {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submenu li {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.submenu li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-container {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 30px; /* extra space at bottom */
+}
+
+.logout-btn {
+  width: auto;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}

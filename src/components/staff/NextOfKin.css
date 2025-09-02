@@ -1,0 +1,117 @@
+.custom-table-container {
+  margin-top: 20px;
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.custom-table .ant-table-tbody > tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.custom-table .ant-table-tbody > tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button {
+  color: #52c41a;
+}
+
+.edit-button:hover {
+  color: #8ef45b;
+}
+
+.delete-button {
+  color: #ff4d4f;
+}
+
+.delete-button:hover {
+  color: #ff7875;
+}
+
+.details-button {
+  color: #1890ff;
+  font-size: 16px;
+}
+
+.details-button:hover {
+  color: #40a9ff;
+}
+
+.custom-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form .ant-form-item-label > label {
+  font-weight: bold;
+  color: #333;
+}
+
+.save-button {
+  background-color: #1890ff;
+  color: white;
+  margin-left: 8px;
+}
+
+.save-button:hover {
+  background-color: #40a9ff;
+}
+
+.cancel-button {
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #d9d9d9;
+}
+
+.form-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.ant-descriptions-item-label {
+  font-weight: 600;
+}
+
+/* Modal styles */
+.custom-modal .ant-modal-content {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-modal .ant-modal-header {
+  background-color: #f0f0f0;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.custom-modal .ant-modal-title {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.custom-modal .ant-modal-body {
+  padding: 24px;
+}
+
+.custom-modal .ant-form-item-label > label {
+  font-weight: 500;
+}

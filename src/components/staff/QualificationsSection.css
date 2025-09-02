@@ -1,0 +1,49 @@
+/* src/components/QualificationsSection.css */
+.qualifications-section table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .qualifications-section th,
+  .qualifications-section td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: black;
+  }
+  
+  .qualifications-section th {
+    background-color: #f8f8f8;
+  }
+  
+  .qualifications-section button {
+    padding: 5px 8px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .section-actions {
+    margin-top: 15px;
+    text-align: right;
+  }
+  
+  .section-actions button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .section-actions button:first-child {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  .section-actions button:last-child {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  
