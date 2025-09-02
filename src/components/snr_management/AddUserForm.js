@@ -234,7 +234,7 @@ const AddUserForm = ({ organizationId, userId, onClose, onUserAdded }) => {
 
   // --- WebSocket: Fetch precompiled form design ---
   useEffect(() => {
-    const wsUrl = `wss://staff-records-backend.onrender.com/ws/form-design/${organizationId}/${userId}`;
+    const wsUrl = process.env.REACT_APP_API_WS_URL+`/ws/form-design/${organizationId}/${userId}`;
     const ws = new WebSocket(wsUrl);
     let timeoutId = setTimeout(() => {
       toast.error("Form design load timeout. Please try again later.");

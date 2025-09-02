@@ -20,7 +20,7 @@ const PersonalDataForm = () => {
   useEffect(() => {
     // fetch('http://localhost:8000/api/default/fetch-all/?skip=0&limit=100')
     //fetch('https://staff-records-backend.onrender.com/api/default/fetch-all/?skip=0&limit=100')
-      fetch('https://staff-records-backend-1b65.onrender.com/api/default/fetch-all/?skip=0&limit=100')
+      fetch(process.env.REACT_APP_API_URL+'/default/fetch-all/?skip=0&limit=100')
       .then(res => res.json())
       .then(data => {
         const rolesItem = data.find(item => item.data_name === "roles");
