@@ -135,13 +135,13 @@
 
 
 // src/components/OrganizationSignup.js
-/*
 import React, { useState } from 'react';
 import MultiStepForm from './MultiStepForm';
 import request from './request';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid'; // Make sure to install uuid via npm or yarn
 import './OrganizationSignup.css';
+import { buildSigninUrl } from '../utils/urlUtils';
 
 
 const parseContactInfo = (contactStr) => {
@@ -286,10 +286,14 @@ const OrganizationSignup = () => {
           // navigate("/signin");
            // Suppose response.data.access_url holds the fake URL and response.data.logos.primary holds the primary logo URL.
       const { access_url, logos } = response.data;
+      
       // Store the logo URL (or pick one from the logos object) in localStorage
       localStorage.setItem('orgLogo', logos?.primary || '');
-      // Redirect to the fake URL appended with '/signin'
-      window.location.href = `${access_url}/signin`;
+      
+      // Build the signin URL using the utility function
+      const redirectUrl = buildSigninUrl(access_url);
+      console.log("Redirecting to:", redirectUrl);
+      window.location.href = redirectUrl;
         } catch (error) {
           console.error("Error during organization signup:", error);
           alert("Error during organization signup: " + error.message);
@@ -308,8 +312,6 @@ const OrganizationSignup = () => {
 };
 
 export default OrganizationSignup;
-
-*/
 
 
 

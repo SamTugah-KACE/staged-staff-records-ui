@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import request from './request';
 import './MultiStepForm.css';
+import { buildSigninUrl } from '../utils/urlUtils';
 
 import PersonalDataForm from './PersonalDataForm';
 import OrganizationDataForm from './OrganizationDataForm';
@@ -256,29 +257,21 @@ const MultiStepForm = ({ selectedProduct, onSubmit = (data) => console.log("Subm
       // navigate("/signin");
        // Suppose response.data.access_url holds the fake URL and response.data.logos.primary holds the primary logo URL.
   const { access_url, logos } = response.data;
+  
   // Store the logo URL (or pick one from the logos object) in localStorage
   localStorage.setItem('orgLogo', logos?.primary || '');
-  // Redirect to the fake URL appended with '/signin'
-  // window.location.href = `${access_url}/signin`;
+  
+  // Build the signin URL using the utility function
+  const redirectUrl = buildSigninUrl(access_url);
+  console.log("Redirecting to:", redirectUrl);
 
   console.log("env: ", process.env.NODE_ENV);
   if (process.env.NODE_ENV === 'development') {
-  console.log("\n development** ")
-    // window.history.pushState({}, '', `${access_url}/signin`);
-    // window.location.reload();
-    // navigate(`${access_url}/signin`,  { re/place: true });
-    window.location.replace(`${access_url}/signin`);
-    // window.location.reload();
-
-    ///// Extract the slug from access_url. If access_url = "https://gi-kace-solutions.onrender.com/ghana-india-kofi-annan-centre-of-excellence-in-ict"
-// then slug = "ghana-india-kofi-annan-centre-of-excellence-in-ict"
-//const slug = access_url.split('/').pop(); // or your custom extraction logic
-// navigate(`/${slug}/signin`);
+    console.log("\n development** ")
+    window.location.replace(redirectUrl);
   } else {
     console.log("\n\nexpect prod.***: ",process.env.NODE_ENV);
-    // navigate(`${access_url}/signin`,  { replace: true });
-    window.location.replace ( `${access_url}/signin`);
-    // window.location.reload();
+    window.location.replace(redirectUrl);
   }
     } catch (error) {
       console.error("Error during organization signup:", error);

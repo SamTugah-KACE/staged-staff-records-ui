@@ -10,20 +10,27 @@ const useValidateSlug = (slug) => {
   useEffect(() => {
     const fetchOrg = async () => {
       try {
+        console.log(`\n🔍 Fetching organization data for slug: "${slug}"`);
+        console.log(`📡 API endpoint: /organizations/slug/${slug}`);
+        
         const response = await request.get(`/organizations/slug/${slug}`);
-        console.log("\nfetch org data using slug in useValidateSlug: ", response.data );
+        console.log("\n✅ Successfully fetched org data:", response.data);
         setOrg(response.data);
       } catch (err) {
-        setError(err.response?.data?.detail || 
-             `\nCheck if there is a typo in ${slug}.\n\n
-             If spelling is correct, try running Windows Network Diagnostics.\n
-             DNS_PROBE_FINISHED_NXDOMAIN\n\n
-             Or contact your Systems Administrator for assistance.`
-        );
+        console.error("\n❌ Error fetching organization data:", err);
+        console.error("Error response:", err.response?.data);
+        console.error("Error status:", err.response?.status);
+        
+        const errorMessage = err.response?.data?.detail || 
+             `Organization with slug "${slug}" not found.\n\n
+             Please check the URL for typos or contact your Systems Administrator for assistance.`;
+        
+        setError(errorMessage);
       } finally {
         setLoading(false);
       }
     };
+    
     if (slug) {
       fetchOrg();
     } else {

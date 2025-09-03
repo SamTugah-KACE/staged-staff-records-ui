@@ -14,7 +14,16 @@ import {Spin} from 'antd';
 const LoginPage = () => {
   const navigate = useNavigate();
   const { orgSlug } = useParams();
-  const { loadin: slugLoading, org, error:slugError } = useValidateSlug(orgSlug);
+  const { loading: slugLoading, org, error: slugError } = useValidateSlug(orgSlug);
+
+  // Debug logging
+  console.log("\n🔐 LoginPage rendered with:");
+  console.log("orgSlug:", orgSlug);
+  console.log("slugLoading:", slugLoading);
+  console.log("org:", org);
+  console.log("slugError:", slugError);
+  console.log("Current URL:", window.location.href);
+  console.log("Current domain:", window.location.origin);
 
   const { login } = useAuth();
   const { setOrgData } = useOrganization();

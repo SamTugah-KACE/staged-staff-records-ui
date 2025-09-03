@@ -57,24 +57,33 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/signup" element={<SignupPage />} />
-      <Route path="/:orgSlug/signin" element={<SigninPage />}   />
-      {/* <Route path="/:orgSlug" element={<SigninPage />} /> */}
-       {/* Add a route for the unauthorized page */}
+      <Route path="/:orgSlug/signin" element={<SigninPage />} />
+      <Route path="/:orgSlug" element={<SigninPage />} />
+      {/* Add a route for the unauthorized page */}
       <Route path="/unauthorized" element={<UnauthorizedPage />} />
-       {/* Wrap protected routes */}
-       <Route element={<ProtectedRoute />}>
-          <Route path="/:orgSlug/dashboard" element={<Dashboard />} />
-          <Route path="/:orgSlug/staff" element={<Staff />} />
-          {/* Add more protected routes here */}
-        </Route>
-        {/* <Route path="/dev/dashboard" element={<SuperAdminDashboard />} /> */}
-    
-      {/* <Route path="/dashboard" element={<Dashboard />} />  */}
+      {/* Wrap protected routes */}
+      <Route element={<ProtectedRoute />}>
+        <Route path="/:orgSlug/dashboard" element={<Dashboard />} />
+        <Route path="/:orgSlug/staff" element={<Staff />} />
+        {/* Add more protected routes here */}
+      </Route>
+      {/* <Route path="/dev/dashboard" element={<SuperAdminDashboard />} /> */}
+      {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       <Route path="/oauth/login" element={<SuperAdminLoginPage />} />
- {/* <Route path="/staff" element={<Staff />} /> */}
+      {/* <Route path="/staff" element={<Staff />} /> */}
+      {/* Catch-all route for 404 handling */}
+      <Route path="*" element={
+        <div style={{ padding: '40px', textAlign: 'center', fontSize: '18px', color: 'red' }}>
+          <h1 style={{ color: 'red' }}>Page Not Found</h1>
+          <p style={{ color: 'black' }}>
+            The page you're looking for doesn't exist.
+          </p>
+          <p style={{ color: 'black' }}>
+            <a href="/" style={{ color: 'blue' }}>Go to Home Page</a>
+          </p>
+        </div>
+      } />
     </Routes>
-    {/** Add page not found ui */}
-    {/* <Route path="*" element={<PageNotFound />} /> */}
      </AuthProvider>
   );
 
